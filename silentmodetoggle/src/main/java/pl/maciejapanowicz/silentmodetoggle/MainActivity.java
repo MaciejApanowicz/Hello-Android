@@ -3,6 +3,7 @@ package pl.maciejapanowicz.silentmodetoggle;
 import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -22,10 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // Always call super.OnCreate () first.
         super.onCreate(savedInstanceState);
-
         //Get a reference to Android's AudioManager so we can use it to toggle our ringer.
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
-
+        Log.d("SilentModeApp", "This is a test");
         /* Initialize our layout using the res/layout/activity_main.xml
            layout file that contains our views for this activity */
         setContentView(R.layout.activity_main);
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             If it's currently silent, do the opposite.*/
 
             RingerHelper.performToggle(audioManager);
+            updateUI();
         }
     });
     }
@@ -61,5 +62,20 @@ public class MainActivity extends AppCompatActivity {
         int phoneImage = RingerHelper.isPhoneSilent(audioManager)
                 ? R.mipmap.ringer_on
                 : R.mipmap.ringer_off;
+
+        //set the imageView to the image in phoneImage
+        imageView.setImageResource(phoneImage);
+    }
+
+    /**
+     * Every time the activity is resumed, make sure to update the buttons to reflect the current
+     * state of the system (since the user may have changed the phone's silent state while we
+     * were in the background)
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Update our UI in case anything has changed
+        updateUI();
     }
 }
