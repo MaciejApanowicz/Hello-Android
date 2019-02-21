@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
         /* Set phoneImage to the ID of the image that represents ringer on or off.
         These are found in res/drawable-xxdpi*/
         int phoneImage = RingerHelper.isPhoneSilent(audioManager)
-                ? R.mipmap.ringer_on
-                : R.mipmap.ringer_off;
+                ? R.mipmap.ringer_off
+                : R.mipmap.ringer_on;
 
         //set the imageView to the image in phoneImage
         imageView.setImageResource(phoneImage);
