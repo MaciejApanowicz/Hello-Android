@@ -1,1 +1,1 @@
-include ':myfirstandroidapp', ':silentmodetoggle'
+include ':myfirstandroidapp', ':silentmodetoggle', ':tasks'
