@@ -1,1 +1,1 @@
-include ':myFirstApp', ':silentmodetoggle', ':tasks'
+include ':myFirstApp', ':silentmodetoggle'
