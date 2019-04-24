@@ -1,4 +1,4 @@
-package pl.maciejapanowicz.silentmodetoggle;
+package pl.maciejapanowicz.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

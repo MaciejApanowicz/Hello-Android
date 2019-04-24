@@ -1,4 +1,4 @@
-package pl.maciejapanowicz.silentmodetoggle.widget;
+package pl.maciejapanowicz.app.widget;
 
 import android.app.IntentService;
 import android.appwidget.AppWidgetManager;

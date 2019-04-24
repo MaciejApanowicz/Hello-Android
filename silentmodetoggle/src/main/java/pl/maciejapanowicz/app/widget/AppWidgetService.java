@@ -1,4 +1,4 @@
-package pl.maciejapanowicz.silentmodetoggle.widget;
+package pl.maciejapanowicz.app.widget;
 
 import android.app.IntentService;
 import android.app.PendingIntent;
@@ -9,8 +9,8 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.widget.RemoteViews;
 
-import pl.maciejapanowicz.silentmodetoggle.R;
-import pl.maciejapanowicz.silentmodetoggle.util.RingerHelper;
+import pl.maciejapanowicz.app.R;
+import pl.maciejapanowicz.app.util.RingerHelper;
 
 public class AppWidgetService extends IntentService {
     private static String ACTION_DO_TOGGLE = "actionDoToggle";

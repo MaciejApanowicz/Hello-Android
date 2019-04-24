@@ -1,4 +1,4 @@
-package pl.maciejapanowicz.silentmodetoggle.util;
+package pl.maciejapanowicz.app.util;
 
 import android.media.AudioManager;
 

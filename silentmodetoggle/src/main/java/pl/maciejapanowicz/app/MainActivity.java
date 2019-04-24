@@ -1,4 +1,4 @@
-package pl.maciejapanowicz.silentmodetoggle;
+package pl.maciejapanowicz.app;
 
 import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import pl.maciejapanowicz.silentmodetoggle.util.RingerHelper;
+import pl.maciejapanowicz.app.util.RingerHelper;
 
 public class MainActivity extends AppCompatActivity {
     AudioManager audioManager;

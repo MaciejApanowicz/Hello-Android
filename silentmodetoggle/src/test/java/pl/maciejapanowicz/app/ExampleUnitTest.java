@@ -1,4 +1,4 @@
-package pl.maciejapanowicz.silentmodetoggle;
+package pl.maciejapanowicz.app;
 
 import org.junit.Test;
 
